@@ -17,7 +17,7 @@ export default function Home() {
         description="As an instructional designer, I developed a project that utilized the
         ADDIE model to create an effective learning experience on the lifecycle of a butterfly.
         The project employed Bloom's Taxonomy to structure learning objectives and utilized a variety of
-        instructional strategiesto engage learners, including interactive activities, multimedia elements,
+        instructional strategies to engage learners, including interactive activities, multimedia elements,
         and formative assessments. Through this project, learners were able to progress through
         the stages of the learning process, from acquiring knowledge about the topic to applying and
         analyzing their understanding." />
