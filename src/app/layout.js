@@ -1,7 +1,13 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Playfair_Display } from 'next/font/google'
+const playfair_display = Playfair_Display({
+  weights: [400, 700],
+  display: 'swap',
+  subsets: ['latin'],
+});
 
-const inter = Inter({ subsets: ['latin'] })
+import Header from '@/components/header';
+import Footer from '@/components/footer';
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,7 +17,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
+      <body className={`${playfair_display.className} text-stone-900`}>
+        <div className='container mx-auto'>
+          <Header />
+          <main>
+            {children}
+          </main>
+          <Footer />
+        </div>
+      </body>
     </html>
   )
 }
